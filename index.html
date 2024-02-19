@@ -50,6 +50,26 @@
             <form id="formulario-calculadora">
               <fieldset>
                 <legend class="h2 text-center">Calculadora de Calorías</legend>
+                
+                <div class="mb-3">
+                  <label for="name" class="form-label h6">Nombre</label>
+                  <input type="number" id="name" class="form-control" placeholder="Digíte su nombre completo">
+                </div>
+                <div class="mb-3">
+                  <label for="document" class="form-label h6">Tipo de documento</label>
+                  <select id="document" class="form-select">
+                    <option></option>
+                    <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                    <option value="Tarjeta de identidad">Cedula de ciudadanía</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Cedula de extranjería">Cedula de extranjería</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="number-document" class="form-label h6">Numero de documento</label>
+                  <input type="number" id="number-document" class="form-control" placeholder="Digíte su número de documento">
+                </div>
+
                 <div class="mb-3">
                   <label for="edad" class="form-label h6">Edad</label>
                   <input type="number" id="edad" class="form-control" min="15" max="80" placeholder="Digíte su edad">
