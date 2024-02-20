@@ -46,7 +46,8 @@ function calcularCalorias(datos) {
 
     let calculoCalorias = datos[datosForm.indexOf("actividad")]*(multiplicadorTMB.peso*datos[datosForm.indexOf("peso")])+(multiplicadorTMB.altura*datos[datosForm.indexOf("altura")])-(multiplicadorTMB.edad*datos[datosForm.indexOf("edad")]);
     datos[datosForm.indexOf("femenino")] == "M" ? calculoCalorias += 5 : calculoCalorias -= 161; 
-    resultado.innerHTML = `<div class=" card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo"><h5 class="card-title h2">Calorías requeridas</h5><div class="mb-3 w-100"><input class="form-control text-center" value="${calculoCalorias} kcal" style="font-size: 2rem" disabled></div></div>`;
+    let mensaje = `El paciente ${datos[datosForm.indexOf("name")]} identificado con ${datos[datosForm.indexOf("docu")]} NO.${datos[datosForm.indexOf("number")]}, requiere un total de ${calculoCalorias} kcal para el sostenimiento de su TBM`; 
+    resultado.innerHTML = `<div class=" card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo"><h5 class="card-title h2">Resultados obtenidos</h5><div class="mb-3 w-100" style="height: 100px;"><div class="form-control text-center" style="font-size: 1rem;" contenteditable="false">${mensaje}</div></div></div>`;
     resultado.style.display = "block";
     aparecerResultado();
     // Volver a limpiar variables

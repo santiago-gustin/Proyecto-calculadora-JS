@@ -40,6 +40,10 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
+input:invalid{
+    background-color: #ff0000;
+}
+
 #resultado {
     display: none;
 }
