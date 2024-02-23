@@ -62,6 +62,7 @@ function calcularCalorias(data) {
 }
 
 function mostrarMensajeDeError(msg) {
+    resultado.innerHTML = "";
     const calculo = document.querySelector('#calculo');
     if (calculo) {
         calculo.remove();
