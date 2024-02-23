@@ -21,8 +21,6 @@ body::-webkit-scrollbar-thumb {
     color: #ff0000 !important;
 }
 
-
-
 /* main */
 .row {
     gap: 10px;
@@ -47,7 +45,6 @@ input:invalid{
 #resultado {
     display: none;
 }
-
 
 /* footer */
 .footer {
