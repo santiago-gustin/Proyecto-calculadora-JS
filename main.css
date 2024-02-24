@@ -28,15 +28,41 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-content {
-    background-image: linear-gradient(#000000c7,#00000054), url('img/cover.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: beige;
+    width: 180vh;
+    margin: 0 auto;
 }
-.main-content .card {
+
+hr {
+    color: rgb(122, 0, 0); /* Color del HR */
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.actividades {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #e7d4e0;
+    margin: 10px 10px 30px 10px;
+}
+
+.actividades:hover{
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*.main-content .card {
     color:rgb(223, 223, 223);
     background-color: rgba(0, 0, 0, 0.5)
-}
+}*/
 
 input:invalid{
     background-color: #ff0000;
@@ -44,6 +70,7 @@ input:invalid{
 
 #resultado {
     display: none;
+    margin-bottom: 30px;
 }
 
 /* footer */

@@ -21,10 +21,11 @@ botonHistorial.addEventListener("click", ()=>{
 })
 
 function createTable(){
-    let filas = '<table><tr class="text-center"><th>Nombre</th><th>Tipo de documento</th><th>Número de documento</th><th>Resultado</th></tr>';
+    let filas = '<table><tr class="text-center"><th class="px-3">Nombre</th><th class="px-3">Tipo de documento</th><th class="px-3">Número de documento</th><th class="px-3">Resultado</th></tr>';
+    historial.length == 0 ? filas = '<div class="d-flex justify-content-center align-items-center h-100"><span class="alert alert-danger text-center">Aun no hay registros</span></div>': 
     historial.forEach((elemento, indice) => {
         filas += `<tr class="text-center"><td>${historial[indice].name}</td><td>${historial[indice].docu}</td><td>${historial[indice].number}</td><td>${historial[indice].resultado}</td></tr>`;
-    });
+    });;
     filas+='</table>';
     return filas;
 }
@@ -101,7 +102,7 @@ function desvanecerResultado() {
     let id = setInterval(() => {
         distancia *= 1.1;
         resultado.style.top = `${distancia}vh`;
-        if (distancia > 100) {
+        if (distancia > 50) {
             clearInterval(id);
             resultado.style.display = 'none';
             resultado.style.top = 0;
